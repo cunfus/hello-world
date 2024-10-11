@@ -1,7 +1,7 @@
 +++
 type = ''
 image = 'ZARD.jpg'
-title = 'Zard'
+title = '坂井泉水'
 date = 2024-10-10T08:10:56+08:00
 +++
 

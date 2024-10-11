@@ -1,0 +1,26 @@
+
+spotify
+
+```
+{{< spotify type="episode" id="1cIoynaHxBRAHmX0geB7tj" theme=0 height="80" >}}
+{{< spotify type="album" id="1024AIZX8jeI3kr6pQo4FR" >}}
+{{< spotify type="album" id="5fqlZFKYqvkIe2jdDGt2nl" height="352">}}
+```
+
+youtube
+
+```
+{{< youtube ID >}}
+```
+
+gist
+
+```
+{{< gist user ID >}}
+```
+
+bilibili
+
+```
+{{< bilibili bvID >}}
+```
