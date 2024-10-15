@@ -1,5 +1,5 @@
 +++
-title = "全部"
+title = "专栏"
 type = "gallery"
 +++
 

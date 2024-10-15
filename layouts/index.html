@@ -1,11 +1,27 @@
 {{ define "main" }}
 
 
-<h1>近期</h1>
+<h1>近期消息</h1>
+
+<div class="posts-list">
+{{ with .Site.GetPage "/news" }}
+    {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
+        <div class="post">
+            <p>
+                <div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>
+                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+                {{ .Summary }}
+            </p>
+        </div>    
+    {{ end }}
+{{ end }}
+</div>
+
+<h1>近期专栏</h1>
 
 <div class="image-grid">
-{{ with .Site.GetPage "/all" }}
-    {{ range first 6 (sort .Data.Pages "Date" "desc")}}
+{{ with .Site.GetPage "/column" }}
+    {{ range first 3 (sort .Data.Pages "Date" "desc")}}
         <a href="{{ .Permalink }}" title="{{ .Title }}">
         {{ $image := .Page.Resources.GetMatch .Params.image }}
         {{ with $image }}
